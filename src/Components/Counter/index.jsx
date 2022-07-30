@@ -14,9 +14,7 @@ const mapActions = (dispatch) => {
         sub: () => dispatch({type: ACTION_TYPES.COUNTER_SUB}),
     }
 }
-const mapStates = (state) => { 
-    const {value} = state; 
-    return {value}
-}
+const mapStates = (state) => state.counterReducer;
+
 export default connect(mapStates,
   mapActions) (Counter);
