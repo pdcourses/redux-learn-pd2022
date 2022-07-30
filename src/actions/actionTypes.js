@@ -1,0 +1,5 @@
+const ACTION_TYPES = {
+    COUNTER_ADD: 'COUNTER_ADD',
+    COUNTER_SUB: 'COUNTER_SUB',
+};
+export default ACTION_TYPES;
