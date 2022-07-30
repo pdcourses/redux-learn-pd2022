@@ -6,8 +6,8 @@ function Counter(props) {
   return (
     <>
         <h1>{props.value}</h1>
-        <button onClick={props.add}>Add</button>
-        <button onClick={props.sub}>Sub</button>
+        <button onClick={props.add}>+</button>
+        <button onClick={props.sub}>-</button>
     </>
   );
 }
@@ -17,6 +17,9 @@ const mapActions = (dispatch) => {
         sub: () => dispatch({type: 'SUB'}),
     }
 }
-const mapStates = (state) => { const {value} = state; return {value}}
+const mapStates = (state) => { 
+    const {value} = state; 
+    return {value}
+}
 
 export default connect(mapStates ,mapActions) (Counter);
