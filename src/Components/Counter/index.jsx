@@ -2,21 +2,26 @@ import React from 'react';
 import  {connect} from 'react-redux'
 import * as actionCreators from '../../actions';
 function Counter(props) {
+  const stepHandler = (e) => {
+    props.setStep(Number(e.target.value));
+  }
   return (
     <>
         <h1>{props.value}</h1>
+        <input type="number" value={props.step} onChange={stepHandler}/>
         <button onClick={props.add}>+</button>
         <button onClick={props.sub}>-</button>
     </>
 );
-}
-const mapActions = (dispatch) => {
+  };
+const mapDispatchToProps = (dispatch) => {
     return{
         add: () => dispatch(actionCreators.add()),
         sub: () => dispatch(actionCreators.sub()),
+        setStep: (newStep) => dispatch(actionCreators.setStep(newStep)),
     }
 }
-const mapStates = (state) => state.counterReducer;
+const mapStateToProps = (state) => state.counterReducer;
 
-export default connect(mapStates,
-  mapActions) (Counter);
+export default connect(mapStateToProps,
+  mapDispatchToProps) (Counter);
