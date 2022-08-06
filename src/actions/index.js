@@ -11,10 +11,10 @@ export const setTheme = (isLight) => ({
     isLight: isLight
 });
 
-export const createUser = (data) => {
+export const createUser = (newUser) => {
     return{
         type: ACTION_TYPES.CREATE_USER,
-        data: data,
+        data: newUser,
     }
 };
 
