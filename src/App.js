@@ -1,12 +1,10 @@
 import './App.css';
-import Counter from './Components/Counter';
-import ThemeSwitcher from './Components/ThemeSwitcher';
+import UserList from './Components/UserList';
 
 function App() {
   return (
     <>
-      <Counter />
-      <ThemeSwitcher />
+      <UserList />
     </>
   );
 }
