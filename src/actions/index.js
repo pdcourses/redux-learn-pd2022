@@ -11,6 +11,7 @@ export const setTheme = (isLight) => ({
     isLight: isLight
 });
 
+// db
 export const createUser = (newUser) => {
     return{
         type: ACTION_TYPES.CREATE_USER,
@@ -39,6 +40,7 @@ export const getUser = (id) => {
     }
 }
 
+//saga
 export const getUserAction = () => ({
     type: ACTION_TYPES.GET_USER_ACTION
 })

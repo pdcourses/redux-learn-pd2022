@@ -23,7 +23,7 @@ const UserList = (props) => {
   )
 }
 
-const mapStateToProps = (state) => state.user; // user reducer
+const mapStateToProps = (state) => state.userReducer; // user reducer
 
 const mapDispatchToProps = (dispatch) => {
   return{

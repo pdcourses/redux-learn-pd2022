@@ -7,7 +7,7 @@ import userDataReducer from "./userDataReducer";
 const rootReducer = combineReducers({
     counterReducer: counterReducer,
     themeReducer: themeReducer,
-    user: userReducer,
+    userReducer: userReducer,
     userData: userDataReducer,
 });
 export default rootReducer;
