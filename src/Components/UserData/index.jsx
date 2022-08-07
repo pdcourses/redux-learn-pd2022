@@ -16,7 +16,7 @@ function UserData(props) {
   )
 }
 
-const mapStateToProps = (state) => state.userInfo; // user reducer
+const mapStateToProps = (state) => state.userData; // user reducer
 
 const mapDispatchToProps = (dispatch) => {
   return{
