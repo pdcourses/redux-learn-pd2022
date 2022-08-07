@@ -1,14 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from '../reducers';
 import rootSaga from '../sagas';
-import createSagaMiddleware from '@redux-saga/core';
-import { applyMiddleware } from 'redux';
+import makeStore from './configStore';
+import rootReducer from '../reducers';
 
-const saga = createSagaMiddleware();
-
-const store = configureStore({reducer : rootReducer}, 
-    applyMiddleware(saga));
-
-saga.run(rootSaga);
+const store = makeStore();
+store.runSaga(rootSaga)
 
 export default store;

@@ -1,7 +1,7 @@
 import {getUserRequest, getUserError, getUserSuccess} from '../actions/';
 import {put} from 'redux-saga/effects'
 
-function *userDataSaga(action){
+export function *userDataSaga(action){
     yield put(getUserRequest())
     try{
         const data = yield fetch('https://randomuser.me/api').then(data => data.json())
@@ -10,4 +10,3 @@ function *userDataSaga(action){
         yield put(getUserError(error))
     }
 }
-export default userDataSaga;
