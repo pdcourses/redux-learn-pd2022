@@ -38,3 +38,26 @@ export const getUser = (id) => {
         id: id,
     }
 }
+/*
+   GET_USER_ACTION: 'GET_USER_ACTION',
+    GET_USER_REQUEST: 'GET_USER_REQUEST',
+    GET_USER_SUCCESS: 'GET_USER_SUCCESS',
+    GET_USER_ERROR: 'GET_USER_ERROR'
+    */
+
+export const getUserAction = () => ({
+    type: ACTION_TYPES.GET_USER_ACTION
+})
+
+export const getUserRequest = () => ({
+    type: ACTION_TYPES.GET_USER_REQUEST
+})
+
+export const getUserSuccess = () => ({
+    type: ACTION_TYPES.GET_USER_SUCCESS
+})
+
+export const getUserError = (error) => ({
+    type: ACTION_TYPES.GET_USER_ERROR,
+    error
+})

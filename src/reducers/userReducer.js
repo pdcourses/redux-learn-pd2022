@@ -10,7 +10,7 @@ const db= [
 ];
 
 const initialState ={
-    users: db,
+    users: [],
     currentUser: {},
     error: null,
     isFetching: false,

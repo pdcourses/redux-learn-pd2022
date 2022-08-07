@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {connect} from 'react-redux';
 import {deleteUser, updateUser} from "../../actions";
 
 const UserList = (props) => {
   const {users, deleteAction, updateAction} = props;
+  
+  useEffect();
+
   const mapUsers = (u, index) => {
     const deleteHandler = () => {deleteAction(u.id);}
     const updateHandler = () => {updateAction({id: u.id, isPay: !u.isPay})}
